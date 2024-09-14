@@ -41,6 +41,8 @@ const Home = () => {
       </section>
         <SearchComponent />
     </div>
+    
+    
   );
 };
 

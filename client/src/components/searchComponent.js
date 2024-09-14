@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-//import Autocomplete from './Autocomplete';
+import Autocomplete from './autocompleteComponent';
 //import SearchResults from './SearchResults';
 
 const SearchComponent = () => {
@@ -18,6 +18,7 @@ const SearchComponent = () => {
 
   return (
     <div>
+      <Autocomplete setQuery={setQuery} />
       <button onClick={handleSearch}>Search</button>
     </div>
   );
