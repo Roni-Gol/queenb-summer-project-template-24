@@ -1,0 +1,32 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+//import Autocomplete from './Autocomplete';
+//import SearchResults from './SearchResults';
+
+const SearchComponent = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+
+  const handleSearch = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/api/content/search', { query });
+      setResults(response.data);
+    } catch (error) {
+      console.error('Error fetching search results:', error);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleSearch}>Search</button>
+    </div>
+  );
+};
+
+export default SearchComponent;
+
+
+
+/*
+<Route path="/search" element={<SearchComponent />} />
+*/
