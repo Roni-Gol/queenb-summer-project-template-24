@@ -10,7 +10,7 @@ const AutocompleteComponent = ({ setQuery }) => {
         setQuery(value);
 
         if (value.length === 0) {
-            // אם שורת החיפוש ריקה, ננקה את הרשימה
+            // reset suggestions when query is empty
             setSuggestions([]);
         } else if(value.length > 2) {
             try {
