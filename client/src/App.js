@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/HomePage/HomePage';
+import SearchPage from './pages/SearchPage/SearchPage';
 import styles from './styles/App.module.css';
-import SearchComponent from './components/searchComponent';
 
 // pages & components
-import Home from './pages/HomePage/HomePage';
 import Upload from './pages/UploadPage/UploadPage';
 import Navbar from './components/Navbar';
 
@@ -17,8 +17,8 @@ function App() {
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/search" element={<SearchComponent />} />
             <Route path="/upload" element={<Upload />} />
+            <Route path="/SearchPage" element={<SearchPage />} />
           </Routes>
         </main>
         <footer className={styles.footer}>

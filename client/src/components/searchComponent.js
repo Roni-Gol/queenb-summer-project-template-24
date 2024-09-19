@@ -4,8 +4,8 @@ import Autocomplete from './autocompleteComponent';
 import SearchResults from './searchResultsComponent';
 
 const SearchComponent = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const [query, setQuery] = useState(''); // saves the string that the user entered
+  const [results, setResults] = useState([]); // saves the search results received from the server after the search
 
   const handleSearch = async () => {
     try {
@@ -28,7 +28,3 @@ const SearchComponent = () => {
 export default SearchComponent;
 
 
-
-/*
-<Route path="/search" element={<SearchComponent />} />
-*/

@@ -7,7 +7,7 @@ const searchContent = async (req, res, isSuggestion = false) => {
     try {
 
         const results = await content.find({
-            $or: [ //Allows to search simultaneously in several different fields
+            $or: [
                 {name:{$regex: query, $options: 'i'}},
                 {workout_type:{$regex: query, $options: 'i'}},
                 {difficulty_level:{$regex: query, $options: 'i'}},
