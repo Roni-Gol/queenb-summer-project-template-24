@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SearchResults = ({ results }) => {
-  console.log(results);
+const SearchResults = ({ results, searchPerformed}) => {
   return (
     <div>
-      {results.length > 0 ? (
-        <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
+      {searchPerformed ? (
+        results.length > 0 ? (
+        <ul style={{ listStyleType: 'none' }}>
           {results.map(result => (
             <li key={result._id}>
               <h3> {result.name} </h3>
@@ -16,8 +16,9 @@ const SearchResults = ({ results }) => {
           ))}
         </ul>
       ) : (
-        <p>No results found</p>
-      )}
+        <h3>No results found</h3>
+      )
+      ) :null}
     </div>
   );
 };

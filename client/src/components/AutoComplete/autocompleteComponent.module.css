@@ -1,0 +1,7 @@
+.suggestionsList li:hover{
+    background-color: #19b15d;
+    color: white;
+    cursor: pointer;
+
+  }
+  
