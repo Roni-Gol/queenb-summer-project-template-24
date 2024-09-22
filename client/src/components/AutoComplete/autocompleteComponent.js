@@ -46,7 +46,7 @@ const AutocompleteComponent = ({ setQuery }) => {
                 <ul className={styles.suggestionsList}>
                     {suggestions.map((suggestion) => (
                         // list of suggestions and handle click on the suggestion
-                        <li key={suggestion._id} onClick={() => handleSuggestionsClick(suggestion)}/*onClick={() => setQuery(suggestion.name)}*/>
+                        <li key={suggestion._id} onClick={() => handleSuggestionsClick(suggestion)}>
                             {suggestion.name}
                         </li>
                     ))}

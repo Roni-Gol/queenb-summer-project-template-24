@@ -3,32 +3,22 @@
     padding: 10px;
     background-color: #19b15d;
     padding-bottom: 60px;
+    /*height: 100%; /* גובה של 100% על כל העמוד 
+    width: 100%; */
 
-
-    
   }
+
+  
   
   .searchHeadline {
     font-size: 2em;
     margin-bottom: 20px;
-  }
-  
-  
-  /* styles for the search results */
-  ul {
-    list-style-position: inside;
-    padding-left: 0;
-    margin: 0; 
-    text-align: center;
  
   }
   
-  li {
-    margin: 0;
-    padding: 4px 0; 
-    /*display: flex;*/
-    align-items: center;
-  }
+  
+  
+  
 
  
   
