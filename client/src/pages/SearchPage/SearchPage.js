@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Search.module.css';
-import SearchComponent from '../../components/searchComponent';
+import SearchComponent from '../../components/Search/searchComponent';
 
 const SearchPage = () => {
     return (

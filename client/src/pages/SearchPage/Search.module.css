@@ -1,14 +1,13 @@
 .search {
     text-align: center;
     padding: 10px;
-    background-color: #19b15d;
+    /*background-color: #FFDCE8;*/
     padding-bottom: 60px;
     /*height: 100%; /* גובה של 100% על כל העמוד 
     width: 100%; */
 
   }
 
-  
   
   .searchHeadline {
     font-size: 2em;

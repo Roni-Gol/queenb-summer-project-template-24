@@ -1,0 +1,59 @@
+.resultContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe6f2;
+  }
+
+.resultsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.resultCard {
+    display: flex;
+    background-color: #ffb3cc;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+  }
+
+.resultContent {
+    display: flex;
+    align-items: center;
+    /*margin-right: 30px;
+    margin-left: 15px;*/
+  }
+
+.resultTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #fff;
+  }
+
+.resultDescription {
+    font-size: 14px;
+  }
+
+.resultImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: white; /* כדי לדמות מקום לתמונה */
+  }
+
+.resultLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.resultLink:hover {
+    text-decoration: underline;
+  }
+  

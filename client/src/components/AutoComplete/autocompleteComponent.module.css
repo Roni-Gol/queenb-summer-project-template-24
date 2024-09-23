@@ -1,12 +1,16 @@
 .suggestionsList li:hover{
-    background-color: #19b15d;
+    /*background-color:blueviolet;*/
+
     color: white;
     cursor: pointer;
+    font-weight: bold;
+    /*background-color: lightgray;*/
+
 
   }
   
   /* styles for the search results */
-  ul {
+  /*.suggestionsList*/ ul {
     list-style-type: none;
     list-style-position: inside;
     padding-left: 0;
@@ -15,7 +19,8 @@
  
   }
   
-  li {
+  /*.suggestionsList*/ li {
+    list-style-type: none;
     margin: 0;
     padding: 4px 0; 
     /*display: flex;*/

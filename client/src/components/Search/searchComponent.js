@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Autocomplete from './AutoComplete/autocompleteComponent';
-import SearchResults from './searchResultsComponent';
+import Autocomplete from '../AutoComplete/autocompleteComponent';
+import SearchResults from '../Results/searchResultsComponent';
 
 const SearchComponent = () => {
   const [query, setQuery] = useState(''); // saves the string that the user entered
