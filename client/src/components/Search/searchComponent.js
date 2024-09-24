@@ -19,10 +19,16 @@ const SearchComponent = () => {
     }
   };
 
+  const handleKeyDown  = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div>
-      <Autocomplete setQuery={setQuery} />
-      <button onClick={handleSearch}>Search</button>
+      <Autocomplete setQuery={setQuery} onKeyDown={handleKeyDown} />
+      <button onClick={handleSearch}>Search </button>
       <SearchResults results={results} searchPerformed={searchPerformed}  />
     </div>
   );

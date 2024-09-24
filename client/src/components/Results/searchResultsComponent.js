@@ -1,23 +1,17 @@
 import React from 'react';
 import styles from './searchResults.module.css'
 
-/*const handleResultClick = (result) => {
-  console.log("Result clicked: ", result); 
-
-}*/
-
 const SearchResults = ({ results, searchPerformed}) => {
-  if (!searchPerformed || results.length === 0) {
-    return null; // if there are no results return null
+  if (!searchPerformed) {
+    return null; // if the search was not performed return null
   }
-  
   return (
     <div className={styles.resultContainer}>
       {searchPerformed ? (
         results.length > 0 ? (
         <ul className={styles.resultsList}>
           {results.map(result => (
-            <li key={result._id} className={styles.resultCard} /*onClick={() => handleResultClick(result)}*/>
+            <li key={result._id} className={styles.resultCard} >
               <div className={styles.resultContent}>
                 <h3 className={styles.resultTitle}>
                   <a href = {result.url} target="_blank" rel="noreferrer" className={styles.resultLink} >
@@ -31,9 +25,9 @@ const SearchResults = ({ results, searchPerformed}) => {
           ))}
         </ul>
       ) : (
-        <h3>No results found</h3>
+        <h3> No results found</h3>
       )
-      ) :null}
+    ) :null}
     </div>
   );
 };

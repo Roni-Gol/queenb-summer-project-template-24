@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from './autocompleteComponent.module.css';
 
 
-const AutocompleteComponent = ({ setQuery }) => {
+const AutocompleteComponent = ({ setQuery ,onKeyDown}) => {
     const [suggestions, setSuggestions] = useState([]);
     const [inputValue, setInputValue] = useState("");
     //const [loading, setLoading] = useState(false);
@@ -16,9 +16,10 @@ const AutocompleteComponent = ({ setQuery }) => {
         if (value.length === 0) {
             // reset suggestions when query is empty
             setSuggestions([]);
-        } else if(value.length > 2) {
+        } else if(value.length > 0) {
             try {
                 const response = await axios.post('http://localhost:5000/api/content/search/suggestions', { query: value });
+                console.log(typeof response.data);
                 setSuggestions(response.data);
             } catch (error) {
                 console.error('Error fetching suggestions:', error);
@@ -41,6 +42,7 @@ const AutocompleteComponent = ({ setQuery }) => {
                 placeholder="Search for content..."
                 onChange={handleSuggestions}
                 value={inputValue}
+                onKeyDown={onKeyDown}
             />
             {suggestions.length > 0 && (
                 <ul className={styles.suggestionsList}>

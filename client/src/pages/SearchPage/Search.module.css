@@ -1,10 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFDCE8; /* צבע הרקע של כל העמוד */
+  height: 100%;
+}
+
 .search {
     text-align: center;
     padding: 10px;
-    /*background-color: #FFDCE8;*/
+    background-color: #FFDCE8;
     padding-bottom: 60px;
-    /*height: 100%; /* גובה של 100% על כל העמוד 
-    width: 100%; */
+    
 
   }
 
