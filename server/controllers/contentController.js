@@ -88,21 +88,22 @@ const searchContent = async (req, res, isSuggestion = false) => {
     const {query} = req.body     // get the query string
 
     try {
-
+        
         const results = await content.find({
-            $or: [
+            $or: [ //Allows to search simultaneously in several different fields
                 {name:{$regex: query, $options: 'i'}},
                 {workout_type:{$regex: query, $options: 'i'}},
                 {difficulty_level:{$regex: query, $options: 'i'}},
             ]
-
-        }, 'name thumbnail_url description url difficulty_level'); //The fields that we will return
-
-        res.status(200).json(results);
+            
+    }, 'name thumbnail_url description url difficulty_level'); //The fields that we will return
+    
+    res.status(200).json(results);
 
     } catch (err) {
         res.status(500).json({mssg: 'Error searching content', err});
     }
+
 };
 
 module.exports = {
