@@ -17,6 +17,9 @@ const SearchResults = ({ results, searchPerformed}) => {
                   <a href = {result.url} target="_blank" rel="noreferrer" className={styles.resultLink} >
                   {result.name}
                   </a> 
+                  <div>
+                    <p className={styles.resultDescription}> {result.difficulty_level} </p>
+                  </div>
                 </h3>
                 <img src={result.thumbnail_url} alt={result.title} className={styles.resultImage} />
                 <p className={styles.resultDescription}> {result.description}</p>
