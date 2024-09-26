@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Suggestions from '../Suggestions/suggestionsComponent';
 import SearchResults from '../Results/searchResultsComponent';
+import styles from './searchComponent.module.css';
+import { FaSearch, FaTimes } from 'react-icons/fa';
+
+
 
 const SearchComponent = () => {
   const [query, setQuery] = useState(''); // saves the string that the user entered
@@ -38,6 +42,11 @@ const SearchComponent = () => {
       }
     };
 
+  const clearSearch = () => {
+    setQuery('');
+    setSuggestions([]);
+  };
+
   const handleKeyDown  = (event) => {
     if (event.key === 'Enter') {
       handleSearch();
@@ -45,16 +54,23 @@ const SearchComponent = () => {
   };
 
   return (
-    <div>
+    <div className={styles.searchContainer}>
+      <div className={styles.searchBox}>
       <input
         type="text"
         placeholder="Search for content..."
         value={query}
         onChange={handleSuggestions}
         onKeyDown={handleKeyDown}
+        className={styles.searchInput}
+
       />
+
+      <FaSearch className={styles.searchIcon} onClick={handleSearch} />
+      {query && <FaTimes className={styles.clearIcon} onClick={clearSearch} />}
+
+      </div>
       <Suggestions setQuery={setQuery} suggestions={suggestions} setSuggestions={setSuggestions} />
-      <button onClick={handleSearch}>Search </button>
       <SearchResults results={results} searchPerformed={searchPerformed}  />
     </div>
   );

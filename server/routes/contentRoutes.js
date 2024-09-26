@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const { 
+const {
     deleteContent,
     updateContent,
     index,
@@ -43,7 +43,6 @@ router.post('/search', searchContent);
 router.post('/search/suggestions', (req, res) => {
     searchContent(req, res, true);
 });
-
 
 
 module.exports = router;

@@ -1,29 +1,32 @@
 .suggestionsList li:hover{
-    /*background-color:blueviolet;*/
-
     color: white;
     cursor: pointer;
     font-weight: bold;
-    /*background-color: lightgray;*/
-
 
   }
   
   /* styles for the search results */
-  /*.suggestionsList*/ ul {
+  .suggestionsList ul {
     list-style-type: none;
-    list-style-position: inside;
     padding-left: 0;
     margin: 0; 
     text-align: center;
   
-    
   }
   
-  /*.suggestionsList*/ li {
-    list-style-type: none;
+  .suggestionsList li {
     margin: 0;
     padding: 4px 0; 
-    /*display: flex;*/
-    align-items: center;
+    align-items: center; 
+    display: flex;
+  }
+  
+  .suggestionsList {
+    margin-top: 10px;
+    position:static; 
+    background-color: rgba(170, 166, 166, 0.293);
+    width: 300px;  /*Match the width of the search box */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
   }
