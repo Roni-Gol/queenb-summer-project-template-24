@@ -2,26 +2,22 @@ const express = require('express')
 const router = express.Router()
 
 const { 
-    createContent,
     deleteContent,
     updateContent,
-    getAllContent,
-    getRandomContent,
-    getSingleContent,
+    showAllContent,
+    showRandomContent,
+    showContent,
     postContent,
  } = require('../controllers/contentController')
 
 // GET all content
-router.get('/', getAllContent)
+router.get('/', showAllContent)
 
 //GET random content
-router.get('/random', getRandomContent)
+router.get('/random', showRandomContent)
 
 // GET a single content
-router.get('/:id', getSingleContent)
-
-// POST a new content item
-router.post('/', createContent)
+router.get('/:id', showContent)
 
 // POST a new content item
 router.post('/new', postContent)

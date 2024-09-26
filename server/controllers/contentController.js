@@ -1,15 +1,14 @@
-const ContentModel = require('../models/ContentModel'); 
-const Content = require('../models/ContentModel');
+ const Content = require('../models/ContentModel');
 const mongoose = require('mongoose')
 
 // get all content
-const getAllContent = async (req, res) => {
+const showAllContent = async (req, res) => {
     const contents = await Content.find({}).sort({createAt: -1}) //the newest one at the top
     res.status(200).json(contents)
 }
 
 // get random content
-const getRandomContent = async (req, res) => {
+const showRandomContent = async (req, res) => {
     try {
         const count = await Content.countDocuments();
         const random = Math.floor(Math.random() * count);
@@ -21,7 +20,7 @@ const getRandomContent = async (req, res) => {
 }
 
 // get single content
-const getSingleContent = async (req, res) => {
+const showContent = async (req, res) => {
     const {id} = req.params
 
     if(!mongoose.Types.ObjectId.isValid(id)){
@@ -46,29 +45,6 @@ const postContent = async (req, res) => {
         res.status(200).json(content)
     }catch(error){
         res.status(400).json({error: error.message})
-    }
-}
-
-//create a new instance of the model
-const createContent = async (req, res) => {
-    const {name, url, workout_type, duration, difficulty_level, created_at, updated_at} = req.body;
-
-    try {
-        const newContent = await content.create({
-            name,
-            url, 
-            workout_type, 
-            duration, 
-            difficulty_level,
-            thumbnail_url,
-            description,
-            created_at, 
-            updated_at});
-        res.status(200).json({newContent});
-        console.log('New content added:', newContent);
-
-    } catch (err) {
-        res.status(400).json({mssg: 'error creating content', err})
     }
 }
 
@@ -108,11 +84,10 @@ const updateContent = async (req, res) => {
 }
 
 module.exports = {
-    createContent,
     deleteContent,
     updateContent,
-    getAllContent,
-    getRandomContent,
-    getSingleContent,
+    showAllContent,
+    showRandomContent,
+    showContent,
     postContent,
 }

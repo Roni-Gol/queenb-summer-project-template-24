@@ -1,44 +1,45 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-
-//components
-import ContentForm from '../../components/ContentForm';
-
-//import styles from './Home.module.css';
+import styles from './Home.module.css';
 //import RandomDuck from '../../components/RandomDuck/RandomDuck';
 
 
 const Home = () => {
-  const [contents, setContent] = useState(null)
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      const response = await fetch('/api/content')
-      const json = await response.json()
-
-      if(response.ok){
-        setContent(json)
-      }
-    }
-
-    fetchContent()
-  }, [])
-
   return (
-    <div className="home">
-      <div className='contents'>
-        {contents && contents.map((contents) => (
-          <p key={contents._id}>{contents.name}</p>
-        ))}
-      </div>
-      <ContentForm/>
+    <div className={styles.home}>
+      <header style={styles.header}>
+        <h1>Welcome to FitFinder</h1>
+        <p>Your Ultimate Fitness Destination</p>
+      </header>
+
+      <section style={styles.section}>
+        <h2>Find the Perfect Workout Anytime, Anywhere</h2>
+        <p>
+          Whether you're just starting out or you're a seasoned athlete, we have a workout for you. 
+          Browse thousands of videos, from beginner to advanced, designed by professional trainers to help 
+          you achieve your fitness goals.
+        </p>
+      </section>
+
+      <section style={styles.section}>
+        <h2>Share Your Workout</h2>
+        <p>
+          Have a great workout video? Share it with the community! 
+          Upload your fitness routines and inspire others to reach their goals. 
+          It's easy to contribute, and you might just motivate someone on their journey!
+        </p>
+        <button style={styles.button}>Upload Your Workout</button>
+      </section>
+
+      <section style={styles.section}>
+        <h2>Start Your Fitness Journey Today</h2>
+        <p>
+          With easy access to expert training videos and tailored workout plans, getting fit has never been easier. Just search, find, and sweat!
+        </p>
+        <button style={styles.button}>Search Workouts</button>
+      </section>
+
     </div>
   );
 };
 
-
-  //<div className={styles.home}>
-    //  <h1 className={styles.headline}>Duck It</h1>
-      //<RandomDuck />
-    //</div>
 export default Home;

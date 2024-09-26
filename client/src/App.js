@@ -1,25 +1,29 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import styles from './styles/App.module.css';
 
 // pages & components
 import Home from './pages/HomePage/HomePage';
-import Navbar from './components/Navbar'
+import Upload from './pages/UploadPage/UploadPage';
+import Navbar from './components/Navbar';
+
 
 function App() {
-
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <div className="pages">
+    <BrowserRouter>
+      <div className={styles.app}>
+        <Navbar/>
+        <main className={styles.main}>
           <Routes>
-            <Route 
-              path="/" 
-              element={<Home />} 
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} /> 
           </Routes>
-        </div>
-      </BrowserRouter>
-    </div>
+        </main>
+        <footer className={styles.footer}>
+          <p>&copy; 2024 My App</p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
