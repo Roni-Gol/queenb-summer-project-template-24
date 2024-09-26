@@ -9,4 +9,18 @@ const router = express.Router()
 
 router.post('/create', createContent);
 
-module.exports = router;
+<nav className={styles.appNav}>
+  <Link to="/" className={styles.appLink}>Home</Link>
+  <Link to="/library" className={styles.appLink}>Library</Link>
+</nav>
+
+
+
+
+import React from 'react'; // השאירי רק ייבוא אחד
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/HomePage/HomePage';
+import LibraryView from './components/LibraryView';
+import styles from './styles/App.module.css';
+
+  
