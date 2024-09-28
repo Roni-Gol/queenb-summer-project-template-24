@@ -1,0 +1,117 @@
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+
+fieldset {
+    margin: 2em 0 ;
+    padding: 1em 2em;
+    border: solid 1px #f08c9b;
+    border-radius: 6px;
+    min-width: 200px;
+    text-align: left;
+    color: #f95290;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 .25em;
+    color:#f95290;
+}
+
+
+/* new workout form */
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+label:first-of-type{
+    margin-top: 0;
+}
+
+input, textarea {
+  padding: .5em;
+  border: 1px solid #f95290;
+  color: #f95290;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #53474f14;
+}
+
+select{
+  padding: .5em;
+  border: 1px solid #f95290;
+  color: #f95290;
+  border-radius: 4px;
+  background-color: #53474f14;
+  height: 25px;
+  font-weight: bold;
+}
+
+
+form button.add {
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 6px;
+  font-size: .8em;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #f95290;
+  border: none;
+  cursor: pointer;
+  float: right;
+ 
+}
+form button.back {
+  padding: .5em 1em;
+  border-radius: 6px;
+  font-size: .8em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid #f95290;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  background-color: #53474f14;
+  color: #f95290;
+ 
+}
+
+div.error{
+    padding: 10px;
+    background-color: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 1% auto;
+    width: 60%;
+    font-weight: bolder;
+}
+
+div.success{
+  padding: 10px;
+  background-color: #ffefef;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 4px;
+  margin: 1% auto;
+  width: 60%;
+  font-weight: bolder;
+}
+  
+
+@media screen and (min-width:430px){
+    legend {
+        font-size: 1.75em;
+    }
+
+    fieldset{
+        width: 60%;
+        min-width: 320px;
+        margin: auto;
+    }
+}

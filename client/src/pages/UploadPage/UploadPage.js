@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 //components
-import ContentForm from '../../components/ContentForm';
+import ContentForm from '../../components/ContentForm/ContentForm';
 
 const Upload = () => {
     const [contents, setContent] = useState(null)
@@ -22,11 +22,6 @@ const Upload = () => {
   
     return (
       <div className="upload">
-        <div className='contents'>
-          {contents && contents.map((contents) => (
-            <p key={contents._id}>{contents.name}</p>
-          ))}
-        </div>
         <ContentForm/>
       </div>
     );

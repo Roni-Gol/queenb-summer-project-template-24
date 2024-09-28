@@ -1,8 +1,8 @@
- const Content = require('../models/ContentModel');
+const Content = require('../models/ContentModel');
 const mongoose = require('mongoose')
 
 // get all content
-const showAllContent = async (req, res) => {
+const index = async (req, res) => {
     const contents = await Content.find({}).sort({createAt: -1}) //the newest one at the top
     res.status(200).json(contents)
 }
@@ -20,7 +20,7 @@ const showRandomContent = async (req, res) => {
 }
 
 // get single content
-const showContent = async (req, res) => {
+const getContentById = async (req, res) => {
     const {id} = req.params
 
     if(!mongoose.Types.ObjectId.isValid(id)){
@@ -86,8 +86,8 @@ const updateContent = async (req, res) => {
 module.exports = {
     deleteContent,
     updateContent,
-    showAllContent,
+    index,
     showRandomContent,
-    showContent,
+    getContentById,
     postContent,
 }

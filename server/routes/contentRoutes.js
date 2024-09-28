@@ -4,28 +4,34 @@ const router = express.Router()
 const { 
     deleteContent,
     updateContent,
-    showAllContent,
+    index,
     showRandomContent,
-    showContent,
+    getContentById,
     postContent,
  } = require('../controllers/contentController')
 
 // GET all content
-router.get('/', showAllContent)
+//Retrieves all content items in the database
+router.get('/', index)
 
 //GET random content
+//Retrieves a random content from the database
 router.get('/random', showRandomContent)
 
-// GET a single content
-router.get('/:id', showContent)
+// GET a single content by ID
+//Retrieves content with the provided ID
+router.get('/:id', getContentById)
 
-// POST a new content item
+//POST new content
+// Handles the upload of video content 
 router.post('/new', postContent)
 
-// UPDATE a content item
-router.patch('/:id', updateContent) //or put??
+// PATCH update a content item
+// Updates partial details of the content with the provided ID
+router.patch('/:id', updateContent) 
 
 // DELETE a content item
+// Deletes content with the provided ID
 router.delete('/:id', deleteContent)
 
 

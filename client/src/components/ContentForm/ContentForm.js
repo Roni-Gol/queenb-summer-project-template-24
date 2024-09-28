@@ -1,3 +1,6 @@
+import styles from './ContentForm.css';
+import { Link } from "react-router-dom"
+
 const { useState } = require("react")
 
 const ContentForm = () => {
@@ -23,9 +26,12 @@ const ContentForm = () => {
             }
         })
         const json = await response.json()
+        const messageElement = document.getElementById('message'); 
 
         if(!response.ok){
             setError(json.error)
+            messageElement.textContent = json.error;  // Display error message
+            messageElement.className = 'error';
         }
         if(response.ok){
             setName('')
@@ -36,13 +42,17 @@ const ContentForm = () => {
             setTurl('')
             setDescription('')
             setError(null)
+
+            messageElement.textContent = 'New content added successfully!';  // Display success message
+            messageElement.className = 'success';  // Apply success styling
             console.log('New content added', json)
         }
     }
 
     return(
         <form className="create" onSubmit={handleSubmit}>
-            <h3>Add a New Workout</h3>
+            <fieldset>
+                <legend>Add a New Workout</legend>
 
             <label>Workout Name:</label>
             <input 
@@ -90,19 +100,23 @@ const ContentForm = () => {
             />
 
             <label>Description:</label>
-            <input 
-            type="text"
+            <textarea 
+            id='description'
+            rows='5'
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             />
 
-            <button>Add Workout</button>
-            {error && <div className="error">{error}</div>}
-            
-        </form>
+            <Link to="/"><button className='back'>Back</button></Link>
+        
+            <button className='add'>Add Workout</button>
+               
+        </fieldset> 
 
+        <div id="message"></div>  {/* Placeholder for success or error message */}
+        
+        </form>
     )
 }
-
 
 export default ContentForm
