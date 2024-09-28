@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Home.module.css';
-//import RandomDuck from '../../components/RandomDuck/RandomDuck';
-
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return (
@@ -27,7 +26,7 @@ const Home = () => {
           Upload your fitness routines and inspire others to reach their goals. 
           It's easy to contribute, and you might just motivate someone on their journey!
         </p>
-        <button style={styles.button}>Upload Your Workout</button>
+        <Link to="/upload"><button>Upload Your Workout</button></Link>
       </section>
 
       <section style={styles.section}>
