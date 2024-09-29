@@ -5,14 +5,11 @@ import SearchResults from '../Results/searchResultsComponent';
 import styles from './searchComponent.module.css';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 
-
-
 const SearchComponent = () => {
   const [query, setQuery] = useState(''); // saves the string that the user entered
   const [results, setResults] = useState([]); // saves the search results received from the server after the search
   const [searchPerformed, setSearchPerformed] = useState(false); // saves if the search was performed
   const [suggestions, setSuggestions] = useState([]); // saves the suggestions
-
 
   const handleSearch = async () => {
     try {

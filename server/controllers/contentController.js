@@ -103,7 +103,6 @@ const searchContent = async (req, res, isSuggestion = false) => {
     } catch (err) {
         res.status(500).json({mssg: 'Error searching content', err});
     }
-
 };
 
 module.exports = {

@@ -16,7 +16,7 @@ const ContentSchema = new Schema({
       required: false
     },
     duration: {
-      type: String, // or time?
+      type: String,
       required: false
     },
     difficulty_level: {
