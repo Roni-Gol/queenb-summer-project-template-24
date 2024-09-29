@@ -1,0 +1,59 @@
+.resultContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe6f2;
+    border-radius: 10px;
+
+  }
+
+.resultsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.resultCard {
+    display: flex;
+    background-color: #ffb3cc;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+.resultContent {
+    display: flex;
+    align-items: center;
+
+  }
+
+.resultTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #fff;
+  }
+
+.resultDescription {
+    font-size: 14px;
+  }
+
+.resultImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-color: white; 
+  }
+
+.resultLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.resultLink:hover {
+    text-decoration: underline;
+  }
+  

@@ -15,7 +15,7 @@ const showRandomContent = async (req, res) => {
         const content = await Content.findOne().skip(random);
         res.status(200).json(content);
     } catch (error) {
-        res.status(400).json({ mssg: 'Error fetching random content', err: error });
+        res.status(400).json({mssg: 'Error fetching random content', err: error});
     }
 }
 
@@ -23,13 +23,13 @@ const showRandomContent = async (req, res) => {
 const getContentById = async (req, res) => {
     const {id} = req.params
 
-    if(!mongoose.Types.ObjectId.isValid(id)){
+    if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: "No such content - invalid ID"})
     }
 
     const content = await Content.findById(id)
 
-    if(!content){
+    if (!content) {
         return res.status(404).json({error: "No such content"})
     }
 
@@ -83,6 +83,29 @@ const updateContent = async (req, res) => {
     res.status(200).json(content)
 }
 
+// Search for content
+const searchContent = async (req, res, isSuggestion = false) => {
+    const {query} = req.body     // get the query string
+    const fields = !isSuggestion ? 'name' : 'name thumbnail_url description url difficulty_level';  //The fields that we will return
+
+    try {
+        
+        const results = await Content.find({
+            $or: [ //Allows to search simultaneously in several different fields
+                {name:{$regex: query, $options: 'i'}},
+                {workout_type:{$regex: query, $options: 'i'}},
+                {difficulty_level:{$regex: query, $options: 'i'}},
+            ]
+            
+    },fields);
+    
+    res.status(200).json(results);
+
+    } catch (err) {
+        res.status(500).json({mssg: 'Error searching content', err});
+    }
+};
+
 module.exports = {
     deleteContent,
     updateContent,
@@ -90,4 +113,5 @@ module.exports = {
     showRandomContent,
     getContentById,
     postContent,
+    searchContent
 }

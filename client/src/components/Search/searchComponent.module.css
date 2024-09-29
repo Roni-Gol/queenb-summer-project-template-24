@@ -1,0 +1,47 @@
+.searchContainer {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  width: 100%; 
+  flex-direction: column; /* Keep the search box and suggestions in a column layout */
+
+}
+
+.searchBox {
+  position: relative;
+  width: 300px; /* Fixed width to ensure the input doesn't resize */
+  display: flex;
+  border: 2px solid #ff98b7;
+  border-radius: 20px;
+  margin: 0 auto; /* Center the search box */
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 50px 10px 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.searchIcon,
+.clearIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ff98b7;
+
+}
+
+.searchIcon {
+  left: 10px;
+  font-size: 18px;  
+}
+
+.clearIcon {
+  right: 10px;
+  font-size: 18px;
+}

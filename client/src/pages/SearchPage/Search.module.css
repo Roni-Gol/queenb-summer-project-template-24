@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFDCE8; /* צבע הרקע של כל העמוד */
+  min-height: 100%;
+}
+
+.search {
+    text-align: center;
+    padding: 10px;
+    background-color: #FFDCE8;
+    padding-bottom: 60px;
+
+  }
+
+  
+  .searchHeadline {
+    font-size: 2em;
+    margin-bottom: 20px;
+ 
+  }
+  
+  
+  
+  
+
+ 
+  
