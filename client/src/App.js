@@ -1,21 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Home from './pages/HomePage/HomePage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import styles from './styles/App.module.css';
+
+// pages & components
+import Home from './pages/HomePage/HomePage';
+import Upload from './pages/UploadPage/UploadPage';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
     <BrowserRouter>
       <div className={styles.app}>
-        <header className={styles.appHeader}>
-          <img src="/project-logo.png" alt="Logo" className={styles.appLogo} />
-          <nav className={styles.appNav}>
-            <Link to="/" className={styles.appLink}>Home</Link>
-          </nav>
-        </header>
+        <Navbar/>
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} /> 
           </Routes>
         </main>
         <footer className={styles.footer}>
