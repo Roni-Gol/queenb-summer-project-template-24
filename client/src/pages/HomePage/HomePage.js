@@ -1,13 +1,10 @@
 import React from 'react';
 import styles from './Home.module.css';
 import { Link } from "react-router-dom"
-import SearchComponent from '../../components/searchComponent';
 
 const Home = () => {
   return (
     <div className={styles.home}>
-      <h1 className={styles.headline}>Duck It</h1>
-
       <header style={styles.header}>
         <h1>Welcome to FitFinder</h1>
         <p>Your Ultimate Fitness Destination</p>
@@ -37,9 +34,8 @@ const Home = () => {
         <p>
           With easy access to expert training videos and tailored workout plans, getting fit has never been easier. Just search, find, and sweat!
         </p>
-        <button style={styles.button}>Search Workouts</button>
+        <Link to="/SearchPage"><button>Search Workouts</button></Link>
       </section>
-        <SearchComponent />
     </div>
     
     

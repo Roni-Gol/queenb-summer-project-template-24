@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FFDCE8; /* צבע הרקע של כל העמוד */
-  height: 100%;
+  min-height: 100%;
 }
 
 .search {
@@ -10,7 +10,6 @@ body {
     padding: 10px;
     background-color: #FFDCE8;
     padding-bottom: 60px;
-    
 
   }
 

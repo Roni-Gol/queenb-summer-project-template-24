@@ -8,6 +8,7 @@ const Navbar = () => {
           <nav className={styles.appNav}>
             <Link to="/" className={styles.appLink}>Home</Link>
             <Link to="/upload" className={styles.appLink}>Upload</Link>
+            <Link to="/SearchPage" className={styles.appLink}>Search</Link>
           </nav>
         </header>
     )

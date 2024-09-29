@@ -86,17 +86,18 @@ const updateContent = async (req, res) => {
 // Search for content
 const searchContent = async (req, res, isSuggestion = false) => {
     const {query} = req.body     // get the query string
+    const fields = !isSuggestion ? 'name' : 'name thumbnail_url description url difficulty_level';  //The fields that we will return
 
     try {
         
-        const results = await content.find({
+        const results = await Content.find({
             $or: [ //Allows to search simultaneously in several different fields
                 {name:{$regex: query, $options: 'i'}},
                 {workout_type:{$regex: query, $options: 'i'}},
                 {difficulty_level:{$regex: query, $options: 'i'}},
             ]
             
-    }, 'name thumbnail_url description url difficulty_level'); //The fields that we will return
+    },fields);
     
     res.status(200).json(results);
 
