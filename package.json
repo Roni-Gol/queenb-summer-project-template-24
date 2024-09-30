@@ -1,0 +1,12 @@
+{
+  "name": "queenb-summer-project-template-24",
+  "version": "1.0.0",
+  "description": "This project template is designed for junior deevlopers aimed at gaining hands-on experience in full-stack development. \r This project includes a Node.js server with Express, a React client, and MongoDB for the database, providing an opportunity to engage in frontend development, backend development, and API integration.\r Specifically the template is a full-stack MERN application for managing a library of rubber ducks - but you can modify it and build a library application of your choice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

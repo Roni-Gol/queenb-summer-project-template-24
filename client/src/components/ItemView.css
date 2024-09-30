@@ -27,8 +27,9 @@
   
   .library-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
+    justify-content: center;
   }
   
   .item-card {
@@ -59,6 +60,12 @@
   
   @media (max-width: 768px) {
     .library-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .library-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
   }

@@ -8,8 +8,8 @@ const ItemView = () => {
   return (
     <div className="item-view">
       <h1>  id </h1>
-      <p>מid :{id}</p>
-      {/* /}
+      <p>מזהה הפריט: {id}</p>
+      {/* כאן תוסיפי את תצוגת פרטי הפריט */}
     </div>
   );
 };

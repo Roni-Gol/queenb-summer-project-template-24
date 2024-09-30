@@ -17,7 +17,7 @@ const LibraryView = () => {
   return (
     <div className="library-container">
       <header>
-        <Link to="/" className="logo">Logo</Link>
+        <Link to="/" className="logo">לוגו</Link>
       </header>
       <div className="library-grid">
         {items.map(item => (
