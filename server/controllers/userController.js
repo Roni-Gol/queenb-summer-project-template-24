@@ -21,7 +21,6 @@ const loginUser = async (req, res) => {
 
 //signup user
 const signupUser = async (req, res) => {
-   console.log('signup user');
     const { email, password, firstName, surname } = req.body;
 
     try {
