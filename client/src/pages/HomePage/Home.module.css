@@ -1,10 +1,31 @@
+
 .home {
   text-align: center;
   padding: 20px;
+  margin: 0%;
 }
 
 .headline {
   font-size: 2em;
   margin-bottom: 20px;
   color: #53474F;
+}
+
+section {
+  margin: '20px 0';
+  text-align: left;
+}
+
+
+button {
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 6px;
+  font-size: .8em;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #f95290;
+  border: none;
+  cursor: pointer;
+
 }
