@@ -28,9 +28,6 @@ function App() {
             <Route path="/login" element={<login />} />
           </Routes>
         </main>
-        <footer className={styles.footer}>
-          <p>&copy; 2024 My App</p>
-        </footer>
       </div>
     </BrowserRouter>
   );
