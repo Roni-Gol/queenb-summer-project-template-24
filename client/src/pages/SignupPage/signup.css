@@ -1,0 +1,109 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffeef5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.signup {
+    background-color: white; /*#ffe5ec;*/ 
+    padding: 40px;
+    border-radius: 20px;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; 
+    margin: 40px auto; /*center the form on the page*/
+}
+
+.signup h3 {
+    grid-column: span 2; 
+    text-align: center;
+    font-size: 36px;
+    color: #ff7ea8; 
+    margin-bottom: 20px;
+}
+
+.signup label {
+    font-size: 18px;
+    color: #ff7ea8; 
+    margin-bottom: 5px;
+    display: block;
+}
+
+.signup input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffc0cb; 
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.signup input:focus {
+    border-color: #ff7ea8; 
+    box-shadow: 0 0 5px rgba(255, 126, 168, 0.5);
+}
+
+.signup button {
+    background-color: #ff7ea8; 
+    color: #fff;
+    font-size: 23px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.signup button:hover {
+    background-color: #ff4f8b; /* Darker pink on hover */
+}
+
+.signup button:disabled {
+    background-color: #ffc0cb;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.grid {
+    display: flex
+}
+
+.container {
+    flex: 1;
+    padding: 10px;
+}
+
+.label-name {
+    text-align: start;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ff4f8b;
+  }
+
+  .signup-heading {
+    font-size: 2em;
+    color: #ff4f8b;
+    margin-bottom: 1px;
+  }
+  

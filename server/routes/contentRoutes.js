@@ -11,6 +11,9 @@ const {
     searchContent
  } = require('../controllers/contentController')
 
+ const requireAuth = require('../middleware/requireAuth');
+ router.use(requireAuth); //require auth for all routes
+
 // GET all content
 //Retrieves all content items in the database
 router.get('/', index)
