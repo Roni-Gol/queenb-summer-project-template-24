@@ -4,11 +4,6 @@ import Home from './pages/HomePage/HomePage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import styles from './styles/App.module.css';
 
-import signup from './pages/signup';
-import login from './pages/login';
-
-import ItemView from './components/ItemView';
-import LibraryView from './components/LibraryView';
 // pages & components
 import Upload from './pages/UploadPage/UploadPage';
 import Navbar from './components/Navbar';

@@ -1,20 +1,11 @@
 import React from 'react';
 import styles from './Home.module.css';
-<<<<<<< HEAD
-import RandomDuck from '../../components/RandomDuck/RandomDuck';
-import LibraryView from '../../components/LibraryView'
 
-=======
 import { Link } from "react-router-dom"
->>>>>>> 49df72d2446741dc2e6ec08f1c523ae9ad7e07d0
 
 const Home = () => {
   return (
     <div className={styles.home}>
-<<<<<<< HEAD
-      <h1 className={styles.headline}>Duck It</h1>
-      <LibraryView />
-=======
       <header style={styles.header}>
         <h1>Welcome to FitFinder</h1>
         <p>Your Ultimate Fitness Destination</p>
@@ -46,7 +37,6 @@ const Home = () => {
         </p>
         <Link to="/SearchPage"><button>Search Workouts</button></Link>
       </section>
->>>>>>> 49df72d2446741dc2e6ec08f1c523ae9ad7e07d0
     </div>
     
     
