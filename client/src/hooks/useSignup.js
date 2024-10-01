@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { useAuthContext } from './useAuthContext'
+import { useNavigate } from 'react-router-dom';
 
 export const useSignup = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null); //true when we start the request
     const { dispatch } = useAuthContext();
+    const navigate = useNavigate();
+
     const signup = async (email, password, firstName, surname) => {
         setIsLoading(true);
         setError(null);
@@ -29,6 +32,8 @@ export const useSignup = () => {
             localStorage.setItem('user', JSON.stringify(result)); //json web token and email
             
             dispatch( {type: 'LOGIN', payload: result } ); //update the auth context
+
+            navigate('/');
         }
     }
     return { signup, isLoading, error };

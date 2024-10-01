@@ -13,6 +13,8 @@ import LibraryView from './components/LibraryView';
 import Upload from './pages/UploadPage/UploadPage';
 import Navbar from './components/Navbar';
 
+import Signup from './pages/SignupPage/signup';
+import Login from './pages/LoginPage/login';
 
 function App() {
   return (
@@ -24,8 +26,8 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/upload" element={<Upload />} />
             <Route path="/SearchPage" element={<SearchPage />} />
-            <Route path="/signup" element={<signup />} />
-            <Route path="/login" element={<login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
       </div>
