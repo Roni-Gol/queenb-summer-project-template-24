@@ -13,7 +13,7 @@ const SearchComponent = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/content/search', { query });
+      const response = await axios.post('${API_URL}/api/content/search', { query });
       setResults(response.data);
     } catch (error) {
       console.error('Error fetching search results:', error);
