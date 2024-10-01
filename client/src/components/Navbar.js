@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import styles from '../styles/App.module.css';
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Navbar = () => {
