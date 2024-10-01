@@ -1,9 +1,8 @@
 import styles from './ContentForm.css';
 import { Link } from "react-router-dom"
-import React from 'react';
+import React, { useState } from 'react';
 
-
-const { useState } = require("react")
+//const { useState } = require("react")
 
 const ContentForm = () => {
     const [name, setName] = useState('')
