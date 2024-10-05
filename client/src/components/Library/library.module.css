@@ -1,0 +1,49 @@
+.libraryContainer {
+    padding: 20px;
+  }
+  
+  .libraryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .libraryItem {
+    background-color: #ffb3cc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .libraryImage, .libraryVideo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .libraryTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .libraryDescription {
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  
+  .libraryLink{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+  .libraryLink:hover {
+    text-decoration: underline;
+  }
+
+  .libraryDifficultyLevel{
+    font-size: 1rem;
+    color: #fff;
+  }

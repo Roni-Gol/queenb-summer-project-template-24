@@ -1,12 +1,6 @@
 const Content = require('../models/ContentModel');
 const mongoose = require('mongoose')
 
-// get all content
-const index = async (req, res) => {
-    const contents = await Content.find({}).sort({createAt: -1}) //the newest one at the top
-    res.status(200).json(contents)
-}
-
 // get random content
 const showRandomContent = async (req, res) => {
     try {
@@ -109,7 +103,6 @@ const searchContent = async (req, res, isSuggestion = false) => {
 module.exports = {
     deleteContent,
     updateContent,
-    index,
     showRandomContent,
     getContentById,
     postContent,

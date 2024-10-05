@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
-const contentRoutes = require('./routes/contentRoutes');
+const contentRoutes = require('./routes/contentRoutes')
 const userRoutes = require('./routes/userRoutes')
+const libraryRoutes = require('./routes/libraryRoutes')
 
 dotenv.config();
 
@@ -26,8 +27,9 @@ app.use((req, res, next) => {
 })
 
 // Routes
-app.use('/api/content', contentRoutes);
+app.use('/api/content', contentRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api/library', libraryRoutes)
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)

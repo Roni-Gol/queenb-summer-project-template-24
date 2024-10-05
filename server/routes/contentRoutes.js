@@ -4,7 +4,6 @@ const router = express.Router()
 const {
     deleteContent,
     updateContent,
-    index,
     showRandomContent,
     getContentById,
     postContent,
@@ -12,9 +11,6 @@ const {
  } = require('../controllers/contentController')
 
  
-// GET all content
-//Retrieves all content items in the database
-router.get('/', index)
 
 //GET random content
 //Retrieves a random content from the database
