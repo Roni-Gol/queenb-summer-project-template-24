@@ -19,6 +19,7 @@ const Navbar = () => {
             <Link to="/" className={styles.appLink}>Home</Link>
             <Link to="/upload" className={styles.appLink}>Upload</Link>
             <Link to="/SearchPage" className={styles.appLink}>Search</Link>
+            <Link to = "/Library" className={styles.appLink}>Library</Link>
             <div className={styles.appUserGroup}>
             {user && (
             <div>
@@ -27,10 +28,10 @@ const Navbar = () => {
             </div>
             )}
             {!user && (
-              <div>
-                <Link to='/login' className={styles.appUserLink}>Login</Link>
-                <Link to='/signup' className={styles.appUserLink}>Signup</Link>
-              </div>
+              <nav className={styles.appNav}>
+                <Link to="/login" className={styles.appLink}>Login</Link>
+                <Link to="/signup" className={styles.appLink}>Signup</Link>
+              </nav>
             )}
           </div>
           </nav>
