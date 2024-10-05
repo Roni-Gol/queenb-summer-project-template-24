@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/HomePage/HomePage';
-import SearchPage from './pages/SearchPage/SearchPage';
 import styles from './styles/App.module.css';
 
 // pages & components
@@ -10,6 +8,9 @@ import Navbar from './components/Navbar';
 
 import Signup from './pages/SignupPage/signup';
 import Login from './pages/LoginPage/login';
+import Home from './pages/HomePage/HomePage';
+import SearchPage from './pages/SearchPage/SearchPage';
+import Library from './pages/LibraryPage/LibraryPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/SearchPage" element={<SearchPage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/Library" element={<Library />} />
           </Routes>
         </main>
       </div>
